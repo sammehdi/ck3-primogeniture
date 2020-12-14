@@ -1,0 +1,111 @@
+﻿enable_primogeniture = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+
+	title = enable_primogeniture
+	desc = enable_primogeniture_desc
+	selection_tooltip = enable_primogeniture_tooltip
+	confirm_text = enable_primogeniture_confirm
+	major = yes
+	
+	ai_check_interval = 120
+
+	is_shown = {
+		# Must be a ruler in a feudal or tribal government
+		is_landed = yes
+		is_ruler = yes
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+			has_government = tribal_government
+		}
+		# If you already have primogeniture or ultimogeniture, no need for this decision
+		NOR = {
+			has_realm_law = single_heir_succession_law
+			has_realm_law = single_heir_succession_law_youngest
+		}
+	}
+
+	# Always valid if it's shown
+	is_valid = {
+		# Same as shown
+		is_landed = yes
+		is_ruler = yes
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+			has_government = tribal_government
+		}
+		NOR = {
+			has_realm_law = single_heir_succession_law
+			has_realm_law = single_heir_succession_law_youngest
+		}
+	}
+
+	effect = {
+		trigger_event = primo_decisions.0750
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+enable_ultimogeniture = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+
+	title = enable_ultimogeniture
+	desc = enable_ultimogeniture_desc
+	selection_tooltip = enable_ultimogeniture_tooltip
+	confirm_text = enable_ultimogeniture_confirm
+	major = yes
+	
+	ai_check_interval = 120
+
+	is_shown = {
+		# Must be a ruler in a feudal or tribal government
+		is_landed = yes
+		is_ruler = yes
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+			has_government = tribal_government
+		}
+		# If you already have primogeniture or ultimogeniture, no need for this decision
+		NOR = {
+			has_realm_law = single_heir_succession_law
+			has_realm_law = single_heir_succession_law_youngest
+		}
+	}
+
+	# Always valid if it's shown
+	is_valid = {
+		# Same as shown
+		is_landed = yes
+		is_ruler = yes
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+			has_government = tribal_government
+		}
+		NOR = {
+			has_realm_law = single_heir_succession_law
+			has_realm_law = single_heir_succession_law_youngest
+		}
+	}
+
+	effect = {
+		trigger_event = primo_decisions.0752
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
