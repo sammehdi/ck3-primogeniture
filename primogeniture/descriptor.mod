@@ -1,8 +1,9 @@
 version="1.0"
 tags={
 	"Balance"
-	"Gameplay"
 	"Decisions"
+	"Gameplay"
 }
 name="Primogeniture"
-supported_version="1.*"
+supported_version="1.2.2"
+remote_file_id="2321070912"
