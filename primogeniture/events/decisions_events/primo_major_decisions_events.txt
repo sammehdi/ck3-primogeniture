@@ -80,8 +80,9 @@ primo_decisions.0752 = {
 			id = primo_decisions.0753
 		}
 
+		# Just in case the AI is being goofy. AI should only do primogeniture
 		ai_chance = {
-			base = 100
+			base = 0
 		}
 	}
 
@@ -89,7 +90,7 @@ primo_decisions.0752 = {
 	option = {
 		name = primo_decisions.0752.b 
 		ai_chance = {
-			base = 0
+			base = 100
 		}
 	}
 }
